@@ -1,0 +1,67 @@
+{% extends "Baise.html" %}
+{% load static  %}
+{% block content %}
+<!-- Volunteer Section -->
+<section class="py-5">
+    <div class="container">
+      <h2>Volunteer</h2>
+      <p>Contribute your time and skills to support projects on the ground. Whether it's teaching, organizing events, or fieldwork—every hour counts.</p>
+      <a href="{% url 'volunteer_signup' %}" class="btn btn-outline-primary">Sign Up to Volunteer</a>
+      <a href="{% url 'volunteer_list' %}" class="btn btn-outline-primary">List Volunteer</a>
+    </div>
+  </section>
+  
+  <!-- Partner with Us -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2>Partner with Us</h2>
+      <p>We welcome corporate sponsors, foundations, and collaborators to work with us in scaling impact through strategic partnerships.</p>
+      <a href="#" class="btn btn-outline-success">Become a Partner</a>
+    </div>
+  </section>
+  
+  <!-- Fundraise -->
+  <section class="py-5">
+    <div class="container">
+      <h2>Fundraise</h2>
+      <p>Start your own fundraiser to support a project close to your heart. We provide toolkits, digital assets, and guidance to help you succeed.</p>
+      <a href="{% url 'donate' %}" class="btn btn-outline-warning">Start a Fundraiser</a>
+    </div>
+  </section>
+  
+  <!-- Campaigns -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2>Campaigns</h2>
+      <p>Raise awareness for important causes through our advocacy campaigns. Lend your voice, share stories, and participate in events online and offline.</p>
+      <a href="#" class="btn btn-outline-danger">See Active Campaigns</a>
+    </div>
+  </section>
+  
+  <!-- Join the Community -->
+  <section class="py-5">
+    <div class="container">
+      <h2>Join the Community</h2>
+      <p>Subscribe to our newsletter, attend community events, or become part of our outreach network.</p>
+      <form class="row g-3 mt-3">
+        <div class="col-auto">
+          <input type="email" class="form-control" placeholder="Enter your email">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary">Join Now</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Donate CTA -->
+  <section class="py-5 bg-primary text-white text-center">
+    <div class="container">
+      <h2>Make a Difference Today</h2>
+      <p>Your donation helps us reach more lives every day.</p>
+      <a href="{% url 'donate' %}" class="btn btn-light">Donate Now</a>
+    </div>
+  </section>
+
+{% include "footer.html" %}
+{% endblock %}

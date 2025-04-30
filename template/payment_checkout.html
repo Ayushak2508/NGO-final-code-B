@@ -1,0 +1,269 @@
+{% extends "Baise.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+  body {
+    background: linear-gradient(rgba(13, 110, 253, 0.3), rgba(102, 16, 242, 0.3)),
+                url('{% static "images/donate-bg.jpg" %}') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .donate-section {
+    padding: 5rem 1rem;
+  }
+
+  .donate-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeInUp 0.6s ease-in-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .donate-card h2 {
+    font-weight: bold;
+    color: #0d6efd;
+  }
+
+  .pay-now-btn {
+    background: linear-gradient(45deg, #0d6efd, #6610f2);
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .pay-now-btn:hover {
+    background: linear-gradient(45deg, #6610f2, #0d6efd);
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .thank-you-msg {
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .powered-by {
+    font-size: 0.85rem;
+    color: #777;
+  }
+</style>
+
+<section class="donate-section">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-md-10 col-lg-8">
+        <div class="card donate-card p-5">
+          <img src="{% static 'logo.png' %}" alt="NGO Logo" class="mb-3" style="max-height: 15rem;">
+          <h2 class="mb-3">Thank You for Choosing to Donate ❤️</h2>
+          <p class="thank-you-msg mb-4">
+            Your support empowers us to do more, reach farther, and create lasting change. Every rupee you donate brings us one step closer to our mission.
+          </p>
+
+          <!-- Custom Pay Now Button -->
+          <button id="pay-btn" class="pay-now-btn">Pay Now</button>
+
+          <p class="powered-by mt-4">Secure payments powered by <a href="https://razorpay.com" target="_blank">Razorpay</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Razorpay Script -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  const options = {
+    "key": "{{ razorpay_key }}",
+    "amount": "{{ donation.amount }}", // amount in paise
+    "currency": "INR",
+    "name": "Your NGO Name",
+    "description": "Support our cause",
+    "image": "{% static 'logo.png' %}",
+    "order_id": "{{ order_id }}",
+    "handler": function (response) {
+      alert("Payment Successful! Thank you ❤️ \nPayment ID: " + response.razorpay_payment_id);
+    },
+    "prefill": {
+      "name": "{{ donation.name }}",
+      "email": "{{ donation.email }}"
+    },
+    "theme": {
+      "color": "#0d6efd"
+    }
+  };
+
+  const rzp = new Razorpay(options);
+  document.getElementById('pay-btn').onclick = function (e) {
+    rzp.open();
+    e.preventDefault();
+  }
+</script>
+{% include "footer.html" %}
+{% endblock %}
+
+
+{% comment %} {% extends "Baise.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+  .pay-now-btn {
+    background: linear-gradient(45deg, #0d6efd, #6610f2);
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  .pay-now-btn:hover {
+    background: linear-gradient(45deg, #6610f2, #0d6efd);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+  }
+</style>
+
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+
+        <!-- Card -->
+        <div class="card shadow-lg border-0">
+          <div class="card-body p-5">
+            <img src="{% static 'logo.png' %}" alt="NGO Logo" style="max-height: 60px;" class="mb-3">
+            <h2 class="mb-3 text-primary">Thank You for Choosing to Donate ❤️</h2>
+            <p class="lead mb-4">Your support helps us reach more lives every day. Please proceed to complete your donation securely via Razorpay.</p>
+
+            <!-- Custom Pay Button -->
+            <button id="pay-btn" class="pay-now-btn">Pay Now</button>
+
+            <p class="text-muted mt-3 small">Powered by <a href="https://razorpay.com" target="_blank">Razorpay</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Razorpay Script (Custom Trigger) -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  const options = {
+    "key": "{{ razorpay_key }}",
+    "amount": "{{ donation.amount }}", // amount in paise (e.g., 50000 for ₹500)
+    "currency": "INR",
+    "name": "Your NGO Name",
+    "description": "Support our cause",
+    "image": "{% static 'logo.png' %}",
+    "order_id": "{{ order_id }}",
+    "handler": function (response) {
+      alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
+      // Optionally, redirect or send confirmation to server
+    },
+    "prefill": {
+      "name": "{{ donation.name }}",
+      "email": "{{ donation.email }}"
+    },
+    "theme": {
+      "color": "#0d6efd"
+    }
+  };
+
+  const rzp = new Razorpay(options);
+
+  document.getElementById('pay-btn').onclick = function (e) {
+    rzp.open();
+    e.preventDefault();
+  }
+</script>
+{% endblock %}
+
+
+{% comment %} {% extends "Baise.html" %}
+{% load static %}
+{% block content %}
+
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+
+        <!-- Card -->
+        <div class="card shadow-lg border-0">
+          <div class="card-body p-5">
+            <img src="{% static 'logo.png' %}" alt="NGO Logo" style="max-height: 60px;" class="mb-3">
+            <h2 class="mb-3 text-primary">Thank You for Choosing to Donate ❤️</h2>
+            <p class="lead mb-4">Your support helps us reach more lives every day. Please proceed to complete your donation securely via Razorpay.</p>
+
+            <!-- Razorpay Form -->
+            <form id="razorpay-form">
+              <script
+                src="https://checkout.razorpay.com/v1/checkout.js"
+                data-key="{{ razorpay_key }}"
+                data-amount="{{ donation.amount }}"
+                data-currency="INR"
+                data-order_id="{{ order_id }}"
+                data-name="Your NGO Name"
+                data-description="Support our cause"
+                data-image="{% static 'logo.png' %}"
+                data-prefill.name="{{ donation.name }}"
+                data-prefill.email="{{ donation.email }}"
+                data-theme.color="#0d6efd">
+              </script>
+            </form>
+
+            <p class="text-muted mt-3 small">Powered by <a href="https://razorpay.com" target="_blank">Razorpay</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% comment %} {% extends "Baise.html" %} 
+{% load static %}
+{% block content %}
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<form id="razorpay-form">
+  <script
+    src="https://checkout.razorpay.com/v1/checkout.js"
+    data-key="{{ razorpay_key }}"
+    data-amount="{{ donation.amount }}"
+    data-currency="INR"
+    data-order_id="{{ order_id }}"
+    data-name="Your NGO Name"
+    data-description="Support our cause"
+    data-image="/static/logo.png"
+    data-prefill.name="{{ donation.name }}"
+    data-prefill.email="{{ donation.email }}"
+    data-theme.color="#3399cc">
+  </script>
+</form>
+
+  
+{% endblock %} {% endcomment %} 

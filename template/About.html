@@ -1,0 +1,78 @@
+{% extends "Baise.html" %}
+{% load static %} 
+{% block title %}About Us | NGO{% endblock %}
+{% block content %}
+
+<!-- Page Header -->
+{% comment %} <header class="bg-gradient text-white text-center py-5" style="background: linear-gradient(135deg, #0d6efd, #6610f2);">
+  <div class="container">
+    <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">About Us</h1>
+    <p class="lead fst-italic animate__animated animate__fadeInUp">Empowering lives. Creating futures.</p>
+  </div>
+</header> {% endcomment %}
+
+<header class="text-white text-center py-5" style="background: linear-gradient(135deg, #0d6efd, #6610f2);">
+  <div class="container">
+    <h1 class="display-4 fw-bold">About Us</h1>
+    <p class="lead fst-italic">Empowering lives. Creating futures.</p>
+  </div>
+</header>
+
+<!-- Mission Section -->
+<section class="py-5 border-bottom">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="{% static 'Mission.jpg' %}" class="img-fluid rounded shadow-sm" alt="Our Mission">
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold text-primary mb-3"><i class="bi bi-bullseye me-2"></i>Our Mission</h2>
+        <p class="lead text-muted">
+          We aim to create lasting impact in the lives of underprivileged children and communities through education, 
+          women empowerment, and livelihood opportunities. Change begins with compassion and inclusion.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vision Section -->
+<section class="bg-light py-5 border-bottom">
+  <div class="container">
+    <div class="row align-items-center flex-md-row-reverse">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="{% static 'Vision.jpg' %}" class="img-fluid rounded shadow-sm" alt="Our Vision">
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold text-primary mb-3"><i class="bi bi-eye me-2"></i>Our Vision</h2>
+        <p class="lead text-muted">
+          A world where every child has the opportunity to thrive with access to education, healthcare, and support to reach their full potential. 
+          We are committed to building a future of hope and dignity.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Journey / History Section -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5 text-dark"><i class="bi bi-journal-bookmark-fill me-2"></i>Our Journey</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="timeline">
+          <ul class="list-group list-group-flush fs-5">
+            <li class="list-group-item bg-transparent"><i class="bi bi-calendar-event text-primary me-2"></i><strong>2010:</strong> Founded with focus on rural education.</li>
+            <li class="list-group-item bg-transparent"><i class="bi bi-calendar-event text-primary me-2"></i><strong>2012:</strong> Launched first women's empowerment program.</li>
+            <li class="list-group-item bg-transparent"><i class="bi bi-calendar-event text-primary me-2"></i><strong>2015:</strong> Mobile healthcare across 3 states started.</li>
+            <li class="list-group-item bg-transparent"><i class="bi bi-calendar-event text-primary me-2"></i><strong>2018:</strong> Expanded to 100+ villages.</li>
+            <li class="list-group-item bg-transparent"><i class="bi bi-calendar-check text-success me-2"></i><strong>2023:</strong> Crossed 50,000 lives impacted milestone.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "footer.html" %}
+{% endblock %}

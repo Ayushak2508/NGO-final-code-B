@@ -1,0 +1,67 @@
+
+{% extends "Baise.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Hero Section -->
+<header class="bg-primary text-white text-center py-5">
+  <div class="container">
+    <h1 class="display-4">{{ user.username }}</h1>
+    <h1 class="display-4">Empowering Communities</h1>
+    <p class="lead">Through education, healthcare, and sustainable livelihoods.</p>
+    <a href="{% url 'volunteer_signup' %}" class="btn btn-light btn-lg">Join Us</a>
+  </div>
+</header>
+
+<!-- Impact Stats -->
+<section class="py-5 bg-light text-center">
+  <div class="container">
+    <h2>Our Impact</h2>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <h3>50,000+</h3>
+        <p>Children Educated</p>
+      </div>
+      <div class="col-md-4">
+        <h3>300+</h3>
+        <p>Health Camps</p>
+      </div>
+      <div class="col-md-4">
+        <h3>10,000+</h3>
+        <p>Women Empowered</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Campaigns -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Featured Campaigns</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <img src="{% static 'kids.jpg' %}" class="card-img-top" alt="Campaign 1">
+          <div class="card-body">
+            <h5 class="card-title">Back to School Drive</h5>
+            <p class="card-text">Supporting underprivileged children with school supplies.</p>
+            <a href="{% url 'schooldrive' %}" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <img src="{% static 'women.jpg' %}" class="card-img-top" alt="Campaign 2">
+          <div class="card-body">
+            <h5 class="card-title">Women's Health Camps</h5>
+            <p class="card-text">Improving access to maternal and reproductive health care.</p>
+            <a href="{% url 'womenhealth' %}" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% include "footer.html" %}
+{% endblock %}
+

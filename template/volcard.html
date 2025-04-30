@@ -1,0 +1,32 @@
+{% extends "Baise.html" %}
+{% load static %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <h2 class="mb-4 text-center">Our Volunteers</h2>
+    <div class="row g-4">
+      {% for volunteer in volunteers %}
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            {% if volunteer.photo %}
+              <img src="{{ volunteer.photo.url }}" class="card-img-top" alt="{{ volunteer.full_name }}">
+            {% else %}
+              <img src="{% static 'images/default-avatar.png' %}" class="card-img-top" alt="Default Avatar">
+            {% endif %}
+            <div class="card-body">
+              <h5 class="card-title">{{ volunteer.full_name }}</h5>
+              <p><strong>Email:</strong> {{ volunteer.email }}</p>
+              <p><strong>Phone:</strong> {{ volunteer.phone }}</p>
+              <p>{{ volunteer.interests }}</p>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <p class="text-center">No volunteers have signed up yet.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include "footer.html" %}
+{% endblock %}

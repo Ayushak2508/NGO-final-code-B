@@ -1,0 +1,114 @@
+{% extends "Baise.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Hero Banner -->
+<section class="hero text-center text-white" style="background: linear-gradient(rgba(220, 53, 69, 0.6), rgba(220, 53, 69, 0.6)), url('https://images.unsplash.com/photo-1615461066845-cb69f9e24049?fit=crop&w=1600&q=80') no-repeat center center/cover; padding: 120px 0;">
+  <div class="container">
+    <h1 class="display-4 fw-bold mb-3">Women's Health Camps</h1>
+    <p class="lead mb-4">Improving access to maternal and reproductive healthcare in underserved communities.</p>
+    <a href="#donate" class="btn btn-outline-light btn-lg shadow-sm px-4">Support the Cause</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 text-danger fw-bold">Why Women's Health?</h2>
+    <p class="lead text-center text-muted mb-5">Access to proper healthcare is not a privilege — it’s a right. Our health camps bring essential medical services and education to women in remote areas.</p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center bg-white">
+          <div class="card-body">
+            <div class="fs-1 mb-3 text-danger">🩺</div>
+            <h5 class="card-title fw-semibold">Health Checkups</h5>
+            <p class="card-text text-muted">Regular checkups, anemia & diabetes screenings, and maternal assessments.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center bg-white">
+          <div class="card-body">
+            <div class="fs-1 mb-3 text-danger">📢</div>
+            <h5 class="card-title fw-semibold">Awareness Sessions</h5>
+            <p class="card-text text-muted">Education on menstrual hygiene, nutrition, contraception, and prenatal care.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center bg-white">
+          <div class="card-body">
+            <div class="fs-1 mb-3 text-danger">🚐</div>
+            <h5 class="card-title fw-semibold">Mobile Health Vans</h5>
+            <p class="card-text text-muted">Healthcare on wheels — reaching even the most remote villages.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Impact Section -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 text-danger fw-bold">Our Impact</h2>
+    <div class="row text-center">
+      <div class="col-md-3 mb-4">
+        <h3 class="text-danger display-6 fw-bold">8,500+</h3>
+        <p class="mb-0 text-muted">Women Reached</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h3 class="text-danger display-6 fw-bold">35</h3>
+        <p class="mb-0 text-muted">Health Camps Conducted</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h3 class="text-danger display-6 fw-bold">12</h3>
+        <p class="mb-0 text-muted">Districts Covered</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h3 class="text-danger display-6 fw-bold">60+</h3>
+        <p class="mb-0 text-muted">Medical Volunteers</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How You Can Help -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">How You Can Help</h2>
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm h-100 bg-white">
+          <h5 class="fw-semibold">💖 Donate</h5>
+          <p class="text-muted">Fund mobile vans, medical kits, and diagnostic tools. Every bit counts.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm h-100 bg-white">
+          <h5 class="fw-semibold">🩺 Volunteer</h5>
+          <p class="text-muted">Are you a medical professional? Join us in bringing health to rural doorsteps.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm h-100 bg-white">
+          <h5 class="fw-semibold">📱 Share</h5>
+          <p class="text-muted">Help us raise awareness about women’s health rights and resources.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Donation Call To Action -->
+<section class="py-5 bg-danger text-white text-center" id="donate">
+  <div class="container">
+    <h2 class="mb-3 display-6">Make a Life-Saving Impact</h2>
+    <p class="mb-4 lead">Help ensure every woman has access to safe and essential healthcare.</p>
+    <a href="/donate/" class="btn btn-light btn-lg shadow-sm px-4">Donate Now</a>
+  </div>
+</section>
+
+{% include "footer.html" %}
+{% endblock %}

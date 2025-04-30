@@ -1,0 +1,81 @@
+{% extends 'Baise.html' %}
+{% load static %}
+{% block content %}
+<!-- Blog Post List -->
+<section class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Latest Posts</h2>
+  
+      <!-- Blog Post 1 -->
+      <div class="card mb-4">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'skillwomen.jpg' %}" class="img-fluid rounded-start" alt="Post 1">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Empowering Women through Skill Development</h5>
+              <p class="card-text">Our new initiative in Rajasthan and Madhya Pradesh is empowering hundreds of women by providing them with vocational training...</p>
+              <p class="text-muted">Posted on April 21, 2025 by <strong>NGO Name</strong></p>
+              <a href="{% url 'empowerwomen' %}" class="btn btn-outline-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Blog Post 2 -->
+      <div class="card mb-4">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static "Mission.jpg" %}" class="img-fluid rounded-start" alt="Post 2">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">A Milestone in Education Access for Rural Students</h5>
+              <p class="card-text">With our digital classrooms initiative, we've reached over 5,000 rural students and have opened doors to quality education...</p>
+              <p class="text-muted">Posted on April 10, 2025 by <strong>NGO Name</strong></p>
+              <a href="{% url 'edumilestone' %}" class="btn btn-outline-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Blog Post 3 -->
+      <div class="card mb-4">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'healthcamp.jpg' %}" class="img-fluid rounded-start" alt="Post 3">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Mobile Health Vans: Bringing Healthcare to Remote Villages</h5>
+              <p class="card-text">Our mobile health units have served over 10,000 people in remote areas, offering free checkups, vaccinations, and health education...</p>
+              <p class="text-muted">Posted on March 25, 2025 by <strong>NGO Name</strong></p>
+              <a href="{% url 'healthcare' %}" class="btn btn-outline-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Blog Post 4 -->
+      <div class="card mb-4">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'edu.jpg' %}" class="img-fluid rounded-start" alt="Post 4">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Scaling Up Our School-in-a-Box Campaign</h5>
+              <p class="card-text">Our innovative School-in-a-Box program has provided over 3,000 children with educational kits, enabling them to continue learning...</p>
+              <p class="text-muted">Posted on March 12, 2025 by <strong>NGO Name</strong></p>
+              <a href="{% url 'schoolinbox' %}" class="btn btn-outline-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+{% include "footer.html" %}
+{% endblock %}

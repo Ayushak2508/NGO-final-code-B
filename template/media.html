@@ -1,0 +1,91 @@
+{% extends "Baise.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Media Header -->
+<section class="bg-primary text-white text-center py-5">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Media</h1>
+    <p class="lead fst-italic">Explore our photo galleries, videos, and media coverage.</p>
+  </div>
+</section>
+
+<!-- Photos & Videos -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="mb-5 text-center fw-bold">Photos & Videos</h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card shadow-sm border-0">
+          <img src="{% static 'women.jpg' %}" class="card-img-top rounded" alt="Gallery 1">
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card shadow-sm border-0">
+          <img src="{% static 'kids.jpg' %}" class="card-img-top rounded" alt="Gallery 2">
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="ratio ratio-16x9 rounded shadow-sm">
+          <iframe 
+            src="https://www.youtube.com/embed/E1xkXZs0cAQ?si=DbTJqpPOLRbyZHx-" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Press Releases -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="mb-5 text-center fw-bold">Press Releases</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <ul class="list-group list-group-flush fs-5 shadow-sm">
+          <li class="list-group-item">
+            <i class="bi bi-newspaper text-primary me-2"></i>
+            <strong>March 2025:</strong> NGO Launches 10 New Education Centers in Rural Bihar. 
+            <a href="#" class="text-decoration-none text-primary">Read More</a>
+          </li>
+          <li class="list-group-item">
+            <i class="bi bi-newspaper text-primary me-2"></i>
+            <strong>January 2025:</strong> Mobile Health Vans Expand Coverage to 3 New States. 
+            <a href="#" class="text-decoration-none text-primary">View Press Note</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Electronic Media -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="mb-5 text-center fw-bold">Electronic Media Coverage</h2>
+    <div class="row g-4">
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="p-4 bg-light rounded shadow-sm h-100">
+          <h5 class="fw-semibold mb-2">NGO Featured on NDTV - Jan 2025</h5>
+          <p>A spotlight on our skill development initiative for rural women.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">Watch Segment</a>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="p-4 bg-light rounded shadow-sm h-100">
+          <h5 class="fw-semibold mb-2">Blog Coverage - YourStory</h5>
+          <p>How our <strong>"School in a Box"</strong> campaign is redefining rural learning.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">Read Blog</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "footer.html" %}
+{% endblock %}

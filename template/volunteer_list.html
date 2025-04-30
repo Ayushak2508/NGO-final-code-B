@@ -1,0 +1,20 @@
+{% extends 'Baise.html' %}
+{% load static %}
+{% block content %}
+<!-- templates/volunteers/volunteer_list.html -->
+
+{% for volunteer in volunteers %}
+    <div class="volunteer" style="border: 1px solid #ddd; padding: 1em; margin-bottom: 1em; border-radius: 8px; font-family: Arial, sans-serif;">
+        {% if volunteer.photo %}
+            <img src="{{ volunteer.photo.url }}" alt="{{ volunteer.full_name }}" style="width: 100px; height: auto; border-radius: 5px;">
+        {% endif %}
+        <h2 style="margin: 0 0 0.5em 0;">{{ volunteer.full_name }}</h2>
+        <p><strong>Email:</strong> {{ volunteer.email }}</p>
+        <p><strong>Phone:</strong> {{ volunteer.phone }}</p>
+        <p><strong>Interests:</strong><br> {{ volunteer.interests }}</p>
+    </div>
+{% empty %}
+    <p>No volunteers have signed up yet.</p>
+{% endfor %}
+
+{% endblock %}

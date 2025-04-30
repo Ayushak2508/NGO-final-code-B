@@ -1,0 +1,84 @@
+{% extends "Baise.html" %}
+{% load static %}
+{% block content %}
+  <!-- Paste the section here --><!-- Projects Header -->
+<section class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4">Our Projects</h1>
+      <p class="lead">Ongoing and completed initiatives transforming lives.</p>
+    </div>
+  </section>
+  
+  <!-- Projects List -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Featured Projects</h2>
+  
+      <!-- Project 1 -->
+      <div class="card mb-4">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'bihar.jpg' %}" class="img-fluid rounded-start" alt="Project 1">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Digital Classrooms for Rural Schools</h5>
+              <p class="card-text">Empowering rural students with access to smart learning tools and curated content.</p>
+              <ul>
+                <li><strong>Beneficiaries:</strong> 5,000+ students</li>
+                <li><strong>Timeline:</strong> Jan 2024 – Dec 2025</li>
+                <li><strong>Location:</strong> Bihar & Jharkhand</li>
+              </ul>
+              <a href="{% url 'download_report' %}" class="btn btn-outline-primary">Download Report</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 2 -->
+      <div class="card mb-4">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'mp.jpg' %}" class="img-fluid rounded-start" alt="Project 2">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Women's Skill Development Centers</h5>
+              <p class="card-text">Establishing community-based skill centers focused on tailoring, crafts, and digital literacy.</p>
+              <ul>
+                <li><strong>Beneficiaries:</strong> 1,200+ women</li>
+                <li><strong>Timeline:</strong> Mar 2023 – Ongoing</li>
+                <li><strong>Location:</strong> Rajasthan & MP</li>
+              </ul>
+              <a href="{% url 'download_skill_report' %}" class="btn btn-outline-primary">Download Report</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 3 -->
+      <div class="card mb-4">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'assam.jpg' %}" class="img-fluid rounded-start" alt="Project 3">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Community Health on Wheels</h5>
+              <p class="card-text">Mobile vans delivering primary health services and education to remote villages.</p>
+              <ul>
+                <li><strong>Beneficiaries:</strong> 10,000+ individuals</li>
+                <li><strong>Timeline:</strong> Ongoing</li>
+                <li><strong>Location:</strong> UP, Odisha, Assam</li>
+              </ul>
+              <a href="{% url 'download_health_report' %}" class="btn btn-outline-primary">Download Report</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+  {% include "footer.html" %}  
+{% endblock %}

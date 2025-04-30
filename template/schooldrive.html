@@ -1,0 +1,114 @@
+{% extends "Baise.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Hero Banner -->
+<section class="hero text-center text-white" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static "schooldrive.jpeg" %}') no-repeat center center/cover; padding: 120px 0;">
+  <div class="container">
+    <h1 class="display-4 fw-bold mb-3">Back to School Drive</h1>
+    <p class="lead mb-4">Help underprivileged children start the school year with confidence.</p>
+    <a href="#donate" class="btn btn-warning btn-lg shadow-sm">Donate Now</a>
+  </div>
+</section>
+
+<!-- About the Campaign -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">About the Campaign</h2>
+    <p class="text-center lead mb-5">Your support equips children with essential school supplies — giving them hope and a head start on education.</p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center">
+          <div class="card-body">
+            <div class="display-5 mb-3 text-primary">🎒</div>
+            <h5 class="card-title fw-semibold">Backpacks & Stationery</h5>
+            <p class="card-text">Each kit includes notebooks, pencils, pens, erasers, and a sturdy backpack.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center">
+          <div class="card-body">
+            <div class="display-5 mb-3 text-primary">📚</div>
+            <h5 class="card-title fw-semibold">Textbooks</h5>
+            <p class="card-text">Age-appropriate textbooks to support in-class learning and home study.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center">
+          <div class="card-body">
+            <div class="display-5 mb-3 text-primary">🚌</div>
+            <h5 class="card-title fw-semibold">Transportation Support</h5>
+            <p class="card-text">Assisting children in remote areas with safe travel to and from school.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Impact Section -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Our Impact</h2>
+    <div class="row text-center">
+      <div class="col-md-3 mb-4">
+        <h3 class="text-primary display-6 fw-bold">5,000+</h3>
+        <p class="mb-0">Students Reached</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h3 class="text-primary display-6 fw-bold">3,200</h3>
+        <p class="mb-0">Kits Distributed</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h3 class="text-primary display-6 fw-bold">15</h3>
+        <p class="mb-0">Partner Schools</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h3 class="text-primary display-6 fw-bold">20</h3>
+        <p class="mb-0">Local Volunteers</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How to Help -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">How You Can Help</h2>
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h5 class="fw-semibold">💰 Donate</h5>
+          <p>Help sponsor school kits and supplies. Every donation makes a difference.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h5 class="fw-semibold">🙋 Volunteer</h5>
+          <p>Join packing drives, distribution efforts, or outreach activities in your area.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h5 class="fw-semibold">📢 Spread the Word</h5>
+          <p>Share our cause on social platforms and bring more hearts to this mission.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Donation CTA -->
+<section class="py-5 bg-primary text-white text-center" id="donate">
+  <div class="container">
+    <h2 class="mb-3">Be the Reason a Child Goes to School</h2>
+    <p class="mb-4">Click below to support this campaign and change lives.</p>
+    <a href="/donate/" class="btn btn-light btn-lg shadow">Donate Now</a>
+  </div>
+</section>
+
+{% include "footer.html" %}
+{% endblock %}

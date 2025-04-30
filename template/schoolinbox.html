@@ -1,0 +1,104 @@
+{% extends "Baise.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Hero Banner -->
+<section class="hero text-center text-white" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 123, 255, 0.7)),  url('{% static "inbox.jpeg" %}') no-repeat center center/cover; padding: 120px 0;">
+  <div class="container">
+    <h1 class="display-4 fw-bold mb-3">Scaling Up Our School-in-a-Box Campaign</h1>
+    <p class="lead mb-4">Bringing quality education to children in need—one box at a time. Over 3,000 kids and counting.</p>
+  </div>
+</section>
+
+<!-- Introduction Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center text-primary fw-bold mb-4">📦 What is School-in-a-Box?</h2>
+    <p class="lead text-center mb-5">Our School-in-a-Box initiative is designed to bridge the educational divide by delivering comprehensive learning kits to children who lack access to formal schooling. From books and stationery to solar lamps and digital content, each box empowers a child to learn, grow, and dream.</p>
+
+    <div class="row text-center">
+      <div class="col-md-4">
+        <h4 class="fw-semibold text-primary">📘 Learning Essentials</h4>
+        <p class="text-muted">Every box contains textbooks, notebooks, pens, and pencils tailored to the child’s grade level.</p>
+      </div>
+      <div class="col-md-4">
+        <h4 class="fw-semibold text-primary">🔦 Study Support</h4>
+        <p class="text-muted">Solar-powered lamps help children study even in homes without electricity.</p>
+      </div>
+      <div class="col-md-4">
+        <h4 class="fw-semibold text-primary">🎧 Audio Learning</h4>
+        <p class="text-muted">Pre-loaded audio lessons bring classroom content to life in areas with no teachers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Impact Section -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center text-primary fw-bold mb-5">📊 Program Impact</h2>
+    <p class="text-center lead mb-4">The numbers speak for themselves. Behind every statistic is a child whose future just got a little brighter.</p>
+
+    <div class="row text-center">
+      <div class="col-md-3 mb-4">
+        <h3 class="text-primary display-6 fw-bold">3,000+</h3>
+        <p class="text-muted">Children Reached</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h3 class="text-primary display-6 fw-bold">12</h3>
+        <p class="text-muted">Districts Covered</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h3 class="text-primary display-6 fw-bold">95%</h3>
+        <p class="text-muted">Usage Satisfaction</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h3 class="text-primary display-6 fw-bold">Ongoing</h3>
+        <p class="text-muted">Expansion in Progress</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How You Can Help -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold text-primary mb-4">📚 Help Fill More Boxes</h2>
+    <p class="text-center text-muted mb-5">Each kit costs less than a meal out—but gives a child the tools to build a lifetime of opportunities.</p>
+
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm bg-white h-100">
+          <h5 class="fw-semibold text-primary">🎁 Sponsor a Box</h5>
+          <p class="text-muted">Give a complete education kit to a child in need. Track your impact directly.</p>
+          <a href="/donate/" class="btn btn-primary">Sponsor Now</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm bg-white h-100">
+          <h5 class="fw-semibold text-primary">👥 Partner With Us</h5>
+          <p class="text-muted">Schools, NGOs, and corporates—join hands to scale this movement.</p>
+          <a href="/partner/" class="btn btn-primary">Become a Partner</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow-sm bg-white h-100">
+          <h5 class="fw-semibold text-primary">📢 Spread Awareness</h5>
+          <p class="text-muted">Tell a friend, share our mission—every voice brings us closer to every child.</p>
+          <a href="https://www.facebook.com/NGO" target="_blank" class="btn btn-primary">Share Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Closing Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center text-primary fw-bold mb-4">✏️ Education Is the First Step</h2>
+    <p class="lead text-center">With every School-in-a-Box we deliver, we're not just giving supplies—we're delivering dreams. Let’s make sure no child is left behind.</p>
+    <p class="text-center text-muted">Posted on March 12, 2025 by <strong>NGO Name</strong></p>
+  </div>
+</section>
+
+{% endblock %}

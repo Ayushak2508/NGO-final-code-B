@@ -1,0 +1,141 @@
+{% extends 'Baise.html' %}
+{% load static %}
+{% block title %}Our Work | NGO{% endblock %}
+{% block content %}
+
+<!-- Page Header -->
+<header class="text-white text-center py-5" style="background: linear-gradient(135deg, #0d6efd, #6610f2);">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Our Work</h1>
+    <p class="lead fst-italic">Explore our key initiatives and community impact.</p>
+  </div>
+</header>
+
+<!-- Education Programs -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4 text-primary"><i class="bi bi-book me-2"></i>Education Programs</h2>
+    <p class="lead text-muted">
+      We provide access to quality education for underprivileged children through community schools, digital classrooms, 
+      and scholarship support. Our education programs focus on foundational learning, life skills, and inclusive access.
+    </p>
+    <div class="row text-center mt-4">
+      <div class="col-md-4 mb-3">
+        <div class="bg-light p-4 rounded shadow-sm">
+          <h3 class="text-success">20,000+</h3>
+          <p>Students Enrolled</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="bg-light p-4 rounded shadow-sm">
+          <h3 class="text-success">120+</h3>
+          <p>Schools Supported</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="bg-light p-4 rounded shadow-sm">
+          <h3 class="text-success">300+</h3>
+          <p>Digital Learning Labs</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Healthcare Initiatives -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold mb-4 text-primary"><i class="bi bi-heart-pulse me-2"></i>Healthcare Initiatives</h2>
+    <p class="lead text-muted">
+      Our mobile health clinics and awareness campaigns provide preventive and curative care to underserved communities.
+      Services include maternal health, immunization, eye care, and adolescent health education.
+    </p>
+    <div class="row text-center mt-4">
+      <div class="col-md-4 mb-3">
+        <div class="bg-white p-4 rounded shadow-sm">
+          <h3 class="text-danger">350+</h3>
+          <p>Health Camps Conducted</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="bg-white p-4 rounded shadow-sm">
+          <h3 class="text-danger">50,000+</h3>
+          <p>Patients Treated</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="bg-white p-4 rounded shadow-sm">
+          <h3 class="text-danger">15</h3>
+          <p>Mobile Health Vans</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Livelihood Programs -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4 text-primary"><i class="bi bi-briefcase-fill me-2"></i>Livelihood Programs</h2>
+    <p class="lead text-muted">
+      We equip marginalized individuals with vocational training and entrepreneurship support to help them build 
+      sustainable livelihoods. Programs include tailoring, computer literacy, and handicraft production.
+    </p>
+    <div class="row text-center mt-4">
+      <div class="col-md-4 mb-3">
+        <div class="bg-light p-4 rounded shadow-sm">
+          <h3 class="text-info">12,000+</h3>
+          <p>Trained Individuals</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="bg-light p-4 rounded shadow-sm">
+          <h3 class="text-info">300+</h3>
+          <p>Self-Help Groups</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="bg-light p-4 rounded shadow-sm">
+          <h3 class="text-info">100+</h3>
+          <p>Small Businesses Started</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Multimedia Gallery -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5 text-dark"><i class="bi bi-camera-reels me-2"></i>Stories from the Field</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'studentwork.jpg' %}" class="card-img-top" alt="Story 1">
+          <div class="card-body">
+            <p class="card-text">A student shares how our digital lab transformed her education journey.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'healthcamp.jpg' %}" class="card-img-top" alt="Story 2">
+          <div class="card-body">
+            <p class="card-text">A health camp in a remote village saves a newborn and educates mothers.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="{% static 'skillwomen.jpg' %}" class="card-img-top" alt="Story 3">
+          <div class="card-body">
+            <p class="card-text">Women artisans building independent businesses after skill training.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "footer.html" %}s
+{% endblock %}
